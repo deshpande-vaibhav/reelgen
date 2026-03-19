@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 ReelGen - Viral Reel Script Generator
 
-## Getting Started
+ReelGen is an AI-powered viral reel script generator built with **Next.js 15** and **Python (FastAPI)**, optimized for seamless deployment on **Vercel**. It uses **OpenRouter** with a sophisticated 10-model fallback system to ensure reliable, high-quality script generation every time.
 
-First, run the development server:
+![ReelGen Testing Results](C:/Users/Geeta/.gemini/antigravity/brain/4297b8f1-f618-43b7-93bf-bc711193fe04/.system_generated/click_feedback/click_feedback_1773931917818.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- **Premium Cinematic UI**: Modern dark mode with glassmorphism, glowing effects, and smooth animations.
+- **AI-Powered**: Generates scripts including Direction, Hook, Body, and CTA.
+- **Reliable Fallbacks**: Automatic 10-model fallback system using OpenRouter (Gemini, Llama 3, DeepSeek, etc.).
+- **Vercel Optimized**: Configured for Vercel Serverless Functions (Python + Next.js).
+- **One-Click Copy**: Easily copy your generated scripts to the clipboard.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15 (App Router, TypeScript)
+- **Styling**: Vanilla CSS (Custom Cinematic Design System)
+- **Backend**: Python (FastAPI, Vercel Serverless)
+- **API**: OpenRouter (Unified AI Interface)
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+- Node.js 18+
+- Python 3.9+
+
+### 2. Environment Variables
+Create a `.env` file in the root directory:
+```env
+OPENROUTER_API_KEY=your_openrouter_api_key_here
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Setup & Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Initialize Python Backend:**
+```bash
+pip install -r requirements.txt
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Initialize Frontend:**
+```bash
+npm install
+```
 
-## Learn More
+### 4. Local Development
 
-To learn more about Next.js, take a look at the following resources:
+**Run the Python API (Port 8000):**
+```bash
+python -m uvicorn api.index:app --port 8000 --reload
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Run the Next.js Dev Server (Port 3000):**
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visit `http://localhost:3000` in your browser.
 
-## Deploy on Vercel
+## ☁️ Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is pre-configured for **Vercel**.
+1. Push your code to a GitHub repository.
+2. Connect the repository to a new project on Vercel.
+3. Add your `OPENROUTER_API_KEY` to the Vercel Project Settings > Environment Variables.
+4. Deploy!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+MIT
