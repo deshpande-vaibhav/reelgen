@@ -2,7 +2,6 @@
 
 ReelGen is an AI-powered viral reel script generator built with **Next.js 15** and **Python (FastAPI)**, optimized for seamless deployment on **Vercel**. It uses **OpenRouter** with a sophisticated 10-model fallback system to ensure reliable, high-quality script generation every time.
 
-![ReelGen Testing Results](C:/Users/Geeta/.gemini/antigravity/brain/4297b8f1-f618-43b7-93bf-bc711193fe04/.system_generated/click_feedback/click_feedback_1773931917818.png)
 
 ## ✨ Features
 
